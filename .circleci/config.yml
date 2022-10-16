@@ -22,6 +22,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm audit fix --force --audit-level=critical
+      - run: npm audit fix --force --audit-level=critical
       - run: npm audit --audit-level=critical
 
 workflows:
