@@ -20,7 +20,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: sudo npm audit
+      - run: npm install
+      - run: npm audit fix --force --audit-level=critical
+      - run: npm audit --audit-level=critical
 
 workflows:
   my_workflow:
